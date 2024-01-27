@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 // Schema for Conversation
 const conversationSchema = new mongoose.Schema({
@@ -20,7 +20,7 @@ const conversationSchema = new mongoose.Schema({
 const ticketSchema = new mongoose.Schema({
     ticketId: {
         type: String,
-        required: true,
+
         unique: true, // Ensure uniqueness of the ticketId
         validate: /^[A-Z0-9]{5}$/ // Validation pattern for five-character string (capital letters and numbers)
     },
