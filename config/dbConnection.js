@@ -5,7 +5,7 @@ const connectDb = () => {
 
     const mongoURI = "mongodb://127.0.0.1:27017/TicketSupportSystem"
 
-    mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+    mongoose.connect(mongoURI);
 
     const db = mongoose.connection;
 
