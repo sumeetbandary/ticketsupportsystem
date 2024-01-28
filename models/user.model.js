@@ -1,8 +1,10 @@
-const mongoose = require('mongoose');
-
+import mongoose from "mongoose";
+import {v4 as uuidv4} from 'uuid';
 // Schema for User
 const userSchema = new mongoose.Schema({
   userId: {
+    type:String,
+    default: uuidv4(), // Set default value to a new UUID
     unique: true,
     required: true,
   },
@@ -32,6 +34,7 @@ const userSchema = new mongoose.Schema({
   ],
 });
 
+
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User;

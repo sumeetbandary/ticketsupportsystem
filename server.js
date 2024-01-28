@@ -4,8 +4,12 @@ const app = express();
 
 import routes from './routes/index.js'
 import connectDb from './config/dbConnection.js';
+
+app.use(express.json())
+
 import initializeSocket from './services/socket.js';
 const server = http.createServer(app);
+
 
 
 const port = 8000;
