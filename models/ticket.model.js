@@ -20,7 +20,6 @@ const conversationSchema = new mongoose.Schema({
 const ticketSchema = new mongoose.Schema({
     ticketId: {
         type: String,
-
         unique: true, // Ensure uniqueness of the ticketId
         validate: /^[A-Z0-9]{5}$/ // Validation pattern for five-character string (capital letters and numbers)
     },
@@ -41,7 +40,6 @@ const ticketSchema = new mongoose.Schema({
     typeId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'TicketType', // Reference to TicketType collection
-        required: true,
     },
     defaultFields: {
         type: Map,

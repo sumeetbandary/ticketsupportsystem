@@ -6,6 +6,6 @@ import { createTicket, getTicket } from '../controllers/ticket.js'
 
 router.post('/createTicket', createTicket);
 
-router.get('/getTicket', getTicket);
+router.get('/getTicket/:ticketId', getTicket);
 
 export default router;
